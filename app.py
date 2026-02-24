@@ -17,18 +17,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # OpenAI import
-try:
-    from openai import OpenAI
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key and hasattr(st, 'secrets'):
-        api_key = st.secrets.get("OPENAI_API_KEY", "")
-    if not api_key:
-        st.error("⚠️ OPENAI_API_KEY가 설정되지 않았습니다. Streamlit Cloud Secrets에서 설정하세요.")
-        st.stop()
-    client = OpenAI(api_key=api_key)
-except Exception as e:
-    st.error(f"OpenAI 라이브러리 로드 실패: {e}")
-    st.stop()
+# try:
+#   from openai import OpenAI
+#  api_key = os.environ.get("OPENAI_API_KEY")
+#   if not api_key and hasattr(st, 'secrets'):
+#        api_key = st.secrets.get("OPENAI_API_KEY", "")
+#    if not api_key:
+#        st.error("⚠️ OPENAI_API_KEY가 설정되지 않았습니다. Streamlit Cloud Secrets에서 설정하세요.")
+#        st.stop()
+#    client = OpenAI(api_key=api_key)
+#except Exception as e:
+#    st.error(f"OpenAI 라이브러리 로드 실패: {e}")
+#    st.stop()
 
 # PIL import
 try:
